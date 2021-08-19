@@ -1,0 +1,15 @@
+{
+  "androidAlias": "key0",
+  "androidAliasPassword": "mypassword",
+  "androidKeystore": "certificates/android.p12",
+  "androidKeystorePassword": "mypassword",
+  "iosDevP12": "certificates/ios_development.p12",
+  "iosDevP12Password": "mypassword",
+  "iosDevelopment": "certificates/development.mobileprovision",
+  "iosDistP12": "certificates/ios_distribution.p12",
+  "iosDistP12Password": "mypassword",
+  "iosDistribution": "certificates/distribution.mobileprovision",
+  "iosPackageType": "app-store",
+  "platform": "android",
+  "release": "debug"
+}
