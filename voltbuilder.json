@@ -10,6 +10,5 @@
   "iosDistP12Password": "mypassword",
   "iosDistribution": "certificates/distribution.mobileprovision",
   "iosPackageType": "app-store",
-  "platform": "android",
   "release": "debug"
 }
