@@ -16,7 +16,7 @@ Consult the Apache Cordova documention for all of the features of Cordova.
 ## iOS
 
 iOS Signing requires developer specific files. This project just has placeholders for them.
-You can generate signing files using [VoltSigner](https://volt.build/certificate/) if you have an Apple Developer account,
+You can generate signing files using [VoltSigner](https://voltsigner.com) if you have an Apple Developer account,
 then add them to this project.
 
 ## Additional Reading
