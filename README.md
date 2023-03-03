@@ -2,7 +2,7 @@
 
 A simple project for VoltBuilder apps.
 
-This is a fairly minimal running project which creates a working Android app.
+This is a fairly minimal running project which creates a working app.
 Feel free to use it as the basis for your project, or to test extra features.
 Consult the Apache Cordova documention for all of the features of Cordova.
 
