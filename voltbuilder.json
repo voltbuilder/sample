@@ -5,10 +5,10 @@
   "androidKeystorePassword": "mypassword",
   "iosDevP12": "certificates/ios_development.p12",
   "iosDevP12Password": "mypassword",
-  "iosDevelopment": "certificates/development.mobileprovision",
+  "iosDevelopment": "certificates/ios_development.mobileprovision",
   "iosDistP12": "certificates/ios_distribution.p12",
   "iosDistP12Password": "mypassword",
-  "iosDistribution": "certificates/distribution.mobileprovision",
+  "iosDistribution": "certificates/ios_distribution.mobileprovision",
   "iosPackageType": "app-store",
   "release": "debug"
 }
