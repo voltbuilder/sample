@@ -2,9 +2,9 @@
 <widget
     xmlns="http://www.w3.org/ns/widgets"
     id="com.nsbasic.HelloWorld"
-    version="0.03"
-    android-versionCode="003"
-    ios-CFBundleVersion="003"
+    version="1.0.1"
+    android-versionCode="2"
+    ios-CFBundleVersion="1.0.1"
 >
 
     <!-- App information -->
