@@ -17,15 +17,25 @@
 <body style="font-family:'Helvetica Neue';">
 <img src="images/voltbuilder-150.png">
 <h1>Here's a simple HelloWorld.</h1>
-<button style="margin:20px;font-size:20px;" onclick="alert('Hello World!')">Click me!</button>
+<button style="margin:20px;font-size:20px;" onclick="showMessage()">Click me!</button>
 
 <script>
 document.addEventListener('deviceready', onDeviceReady, false);
 
 function onDeviceReady() {
     // Cordova is now initialized. Have fun!
-    console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
+    console.log('instantiation complete.');
+ }
+
+function showMessage() {
+  // display info from Cordova and cordova-plugin-device
+  alert(
+    `Hello World!
+    Running cordova-${cordova.platformId}@${cordova.version}
+    ${device.platform} ${device.version} on ${device.manufacturer}`
+  );
 }
+
 </script>
 
 </body>
