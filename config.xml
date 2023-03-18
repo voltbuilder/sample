@@ -21,14 +21,6 @@
 
     <preference name="permissions" value="none"/>
     <preference name="orientation" value="portrait"/>
-    <preference name="fullscreen" value="false"/>
-
-    <preference name="SplashScreenDelay" value="2000" />
-    <preference name="AutoHideSplashScreen" value="true" />
-
-    <preference name="StatusBarOverlaysWebView" value="false"/>
-    <preference name="StatusBarBackgroundColor" value="#ffffff"/>
-    <preference name="StatusBarStyle" value="default"/>
 
     <!-- iOS -->
     <platform name="ios">
@@ -64,7 +56,14 @@
 
     <!-- Plugins -->
     <plugin name="cordova-plugin-splashscreen" spec="^6.0.2" />
+        <preference name="SplashScreenDelay" value="2000" />
+        <preference name="AutoHideSplashScreen" value="true" />
+
     <plugin name="cordova-plugin-statusbar" spec="^2.4.3" />
+        <preference name="StatusBarOverlaysWebView" value="false"/>
+        <preference name="StatusBarBackgroundColor" value="#ffffff"/>
+        <preference name="StatusBarStyle" value="default"/>
+
     <plugin name="cordova-plugin-device" spec="^2.1.0" />
 
 </widget>
