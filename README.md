@@ -20,6 +20,7 @@ You can generate signing files using [VoltSigner](https://voltsigner.com) if you
 then add them to this project.
 
 ## Additional Reading
+
 1. About [config.xml files](https://cordova.apache.org/docs/en/latest/config_ref/index.html)
 1. About [VoltBuilder.json](https://volt.build/docs/set_up/)
 1. About [Setting up VoltBuilder](https://volt.build/docs/set_up/)
