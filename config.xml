@@ -1,42 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- See https://cordova.apache.org/docs/en/latest/config_ref/index.html for more information on this file -->
+
 <widget xmlns="http://www.w3.org/ns/widgets"
-    xmlns:cdv="http://cordova.apache.org/ns/1.0"
-    id="com.voltbuilder.sample"
-    version="1.0.2">
-    <name>VoltBuilder Sample</name>
-    <description>Sample Voltbuilder App</description>
-    <author email="support@voltbuilder.com" href="https://volt.build">
-        Voltbuilder Team
-    </author>
+	xmlns:cdv="http://cordova.apache.org/ns/1.0"
+	id="com.voltbuilder.sample"
+	version="1.0.2">
 
-    <!-- Security Related Settings -->
-    <access origin="https://volt.build" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
+  <!-- The name that will appear on the device's home screen -->
+  <name>VoltBuilder Sample</name>
 
-    <icon src="resources/iconTemplate.png" />
+  <!-- These may appear in app store listings -->
+  <description>Sample Voltbuilder App</description>
+  <author email="support@voltbuilder.com" href="https://volt.build">
+    Voltbuilder Team
+  </author>
 
-    <!-- Splashscreen -->
-    <preference name="SplashScreenDelay" value="2000" />
-    <preference name="SplashScreenBackgroundColor" value="#000000" />
+  <!-- Security Related Settings -->
+  <!-- See https://cordova.apache.org/docs/en/latest/guide/appdev/allowlist/index.html for details -->
 
-    <!-- iOS -->
-    <platform name="ios">
-        <preference name="WKWebViewOnly" value="true" />
+  <!-- The domain(s) the app can communicate with -->
+  <access origin="https://volt.build" />
 
-        <feature name="CDVWKWebViewEngine">
-            <param name="ios-package" value="CDVWKWebViewEngine" />
-        </feature>
+  <!-- The URLs allowed to be externally opened -->
+  <allow-intent href="http://*/*" />
+  <allow-intent href="https://*/*" />
 
-        <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
-    </platform>
+  <!-- The app's icon, displayed on the home page -->
+  <!-- See https://cordova.apache.org/docs/en/latest/config_ref/images.html for details -->
+  <icon src="resources/iconTemplate.png" />
 
-    <!-- Android -->
-    <platform name="android">
-        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/splashTemplate.png" />
-    </platform>
+  <!-- Splashscreen -->
+  <!-- See https://cordova.apache.org/docs/en/latest/core/features/splashscreen/index.html for details -->
+  <preference name="SplashScreenDelay" value="2000" />
+  <preference name="SplashScreenBackgroundColor" value="#000000" />
 
-    <!-- Plugins -->
-    <plugin name="cordova-plugin-device" spec="^3.0.0" />
+  <!-- iOS -->
+  <platform name="ios">
+    <!-- include iOS specific preferences here -->
+  </platform>
+
+  <!-- Android -->
+  <platform name="android">
+    <!-- Android specific splashscreen settings -->
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/splashTemplate.png" />
+  </platform>
+
+  <!-- Plugins - these cannot be inside of platform tags -->
+  <!-- This plugin creates a global device object that grants the
+       app access to information about the device's
+       hardware/software -->
+  <plugin name="cordova-plugin-device" spec="^3.0.0" />
 
 </widget>
