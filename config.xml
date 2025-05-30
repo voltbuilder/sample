@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns="http://www.w3.org/ns/widgets"
     xmlns:cdv="http://cordova.apache.org/ns/1.0"
-    id="com.voltbuilder.hello"
-    version="1.0.0">
-    <name>HelloVoltBuilder</name>
+    id="com.voltbuilder.sample"
+    version="1.0.2">
+    <name>VoltBuilder Sample</name>
     <description>Sample Voltbuilder App</description>
     <author email="support@voltbuilder.com" href="https://volt.build">
         Voltbuilder Team
@@ -18,9 +18,7 @@
 
     <!-- Splashscreen -->
     <preference name="SplashScreenDelay" value="2000" />
-    <preference name="AutoHideSplashScreen" value="true" />
-    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/splashTemplate.png" />
-    <preference name="AndroidWindowSplashScreenBackground" value="#000000" />
+    <preference name="SplashScreenBackgroundColor" value="#000000" />
 
     <!-- iOS -->
     <platform name="ios">
@@ -36,10 +34,9 @@
     <!-- Android -->
     <platform name="android">
         <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/splashTemplate.png" />
-        <preference name="AndroidWindowSplashScreenBackground" value="#ffcd00" />
     </platform>
 
     <!-- Plugins -->
-    <plugin name="cordova-plugin-device" spec="^2.1.0" />
+    <plugin name="cordova-plugin-device" spec="^3.0.0" />
 
 </widget>
