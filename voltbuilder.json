@@ -44,7 +44,7 @@
 
 
   // the release type - debug or release
-  "release": "debug"
+  "release": "debug",
 
   // verbose logging is enabled by default, set to false to disable
   "verbose": "true"
