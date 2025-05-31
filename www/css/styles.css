@@ -1,3 +1,5 @@
+/* Global Styles */
+
 body {
   margin: 0;
   padding: 0;
@@ -5,11 +7,41 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-main {
+/* Minimal Reset */
+
+p, h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Utilities */
+
+.flex-col {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.btn {
+  border: solid 2px #d60c3f;
+  border-radius: calc(16px + 20px);
+  padding: 0.5em 1.5em;
+  background-color: #d60c3f;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.btn:active {
+  background-color: #f1f4f6;
+  color: #d60c3f;
+}
+
+/* Main Styles */
+
+main {
   gap: 2em;
   height: 100vh;
   padding: 1em;
@@ -20,26 +52,48 @@ img {
   height: auto;
 }
 
-h1 {
-  margin: 0;
-  padding: 0;
+h1, h2 {
   text-align: center;
   font-weight: normal;
   color: #25376d;
 }
 
-button {
-  border: solid 2px #d60c3f;
-  border-radius: calc(16px + 20px);
-  padding: 0.75em 1.5em;
-  background-color: #d60c3f;
-  cursor: pointer;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #ffffff;
+/* Dialog Styles */
+
+dialog {
+  border: none;
+  padding: 0;
 }
 
-button:hover, button:focus {
+dialog::backdrop {
+  background-color: rgba(37, 55, 109, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+form {
+  gap: 1.5em;
+  box-shadow: 0 0 3px #999;
+  border: 1px solid #ddd;
   background-color: #f1f4f6;
-  color: #d60c3f;
+}
+
+.dialog-header {
+  margin-top: 1em;
+}
+
+.dialog-body {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.dialog-divider {
+  align-self: stretch;
+  margin: 0.5em 0 0 0;
+  border: 1px solid #ddd;
+}
+
+.dialog-footer {
+  align-self: self-end;
+  margin-bottom: 1.25em;
+  margin-right: 1.25em;
 }
