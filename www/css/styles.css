@@ -9,7 +9,9 @@ body {
 
 /* Minimal Reset */
 
-p, h1, h2 {
+p,
+h1,
+h2 {
   margin: 0;
   padding: 0;
 }
@@ -52,9 +54,10 @@ img {
   height: auto;
 }
 
-h1, h2 {
-  text-align: center;
+h1,
+h2 {
   font-weight: normal;
+  text-align: center;
   color: #25376d;
 }
 
