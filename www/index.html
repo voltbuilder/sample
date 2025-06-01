@@ -25,12 +25,26 @@
     <script src="cordova.js"></script>
   </head>
   <body>
-    <main>
+    <main class="flex-col">
       <img alt="" src="images/voltbuilder-150.png" />
-      <h1>Here's a simple HelloWorld.</h1>
-      <button role="button" aria-label="Click to view alert" aria-disabled="false" onclick="showMessage()">
-        Click me!
+      <h1>Here's a simple Cordova sample.</h1>
+      <button class="btn" id="show-dialog-btn" aria-label="Tap to view app info" aria-disabled="false" onclick="showMessage()">
+        Tap for App Info
       </button>
+      <dialog id="infoDialog" role="dialog" aria-labelledby="dialogTitle" aria-describedby="dialogDesc">
+        <form class="flex-col" method="modal">
+          <header class="dialog-header">
+            <h2 id="dialogTitle">Hello World!</h2>
+          </header>
+          <div class="dialog-body">
+            <p id="dialogDesc"></p>
+          </div>
+          <hr class="dialog-divider">
+          <footer class="dialog-footer">
+            <button class="btn" id="closeBtn" aria-label="Tap to close dialog">Close</button>
+          </footer>
+        </form>
+      </dialog>
     </main>
 
     <script>
@@ -43,11 +57,12 @@
 
       function showMessage() {
         // display info from Cordova and cordova-plugin-device
-        alert(
-          `Hello World!
-    Running cordova-${cordova.platformId}@${cordova.version}
-    ${device.platform} ${device.version} on ${device.manufacturer}`,
-        );
+        dialogDesc.textContent = `Running cordova-${cordova.platformId}@${cordova.version}
+        ${device.platform} ${device.version} on ${device.manufacturer}`;
+
+        // Show the dialog and set focus for accessibility
+        infoDialog.showModal();
+        document.getElementById("closeBtn").focus();
       }
     </script>
   </body>
