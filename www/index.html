@@ -19,22 +19,13 @@
     <main class="flex-col">
       <img alt="" src="images/voltbuilder-150.png" />
       <h1>Here's a simple Cordova sample.</h1>
-      <button class="btn" id="show-dialog-btn" aria-label="Tap to view app info" aria-disabled="false" onclick="showMessage()">
+      <button class="btn-main" id="show-dialog-btn" aria-label="Tap to view app info" aria-disabled="false" onclick="showMessage()">
         Tap for App Info
       </button>
       <dialog id="infoDialog" role="dialog" aria-labelledby="dialogTitle" aria-describedby="dialogDesc">
-        <form class="flex-col" method="modal">
-          <header class="dialog-header">
-            <h2 id="dialogTitle">Hello World!</h2>
-          </header>
-          <div class="dialog-body">
-            <p id="dialogDesc"></p>
-          </div>
-          <hr class="dialog-divider">
-          <footer class="dialog-footer">
-            <button class="btn" id="closeBtn" aria-label="Tap to close dialog">Close</button>
-          </footer>
-        </form>
+        <h2 id="dialogTitle">Hello World!</h2>
+        <p id="dialogDesc"></p>
+        <a href="#" class="btn-modal" id="closeBtn" onclick="window.infoDialog.close();">CLOSE</a>
       </dialog>
     </main>
 
