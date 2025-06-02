@@ -84,12 +84,15 @@ h2 {
 }
 
 .btn-modal {
-  float: right;
-  border: none;
-  border-radius: 5px;
-  padding: 24px 30px;
+  display: inline-block;
+  margin-top: 24px;
+  border-top: 1px solid #ddd;
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 24px;
   background: none;
   cursor: pointer;
+  text-align: center;
   text-decoration: none;
   color: #25376d;
 }
