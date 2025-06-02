@@ -1,0 +1,123 @@
+/* Global Styles */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f1f4f6;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Minimal Reset */
+
+p,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Utilities */
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Styles */
+
+main {
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  height: 100vh;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+img {
+  margin-top: auto;
+  max-width: 100%;
+  height: auto;
+  padding-top: 1em;
+}
+
+h1 {
+  text-align: center;
+  font-weight: normal;
+  color: #25376d;
+}
+
+.btn-main {
+  border: solid 2px #d60c3f;
+  border-radius: calc(16px + 20px);
+  padding: 0.5em 1.5em;
+  background-color: #d60c3f;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.btn-main:active {
+  background-color: #f1f4f6;
+  color: #d60c3f;
+}
+
+.docs-link {
+  margin-top: auto;
+  padding: 1em;
+  border-top: 1px solid #ddd;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #25376d;
+}
+
+/* Dialog Styles */
+
+dialog {
+  border: none;
+  border-radius: 5px;
+  padding: 0;
+}
+
+dialog::backdrop {
+  background-color: rgba(37, 55, 109, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+h2 {
+  margin-bottom: 0.5em;
+  font-size: 1.25em;
+  padding: 30px 30px 0px 30px;
+}
+
+#dialogDesc {
+  padding: 0px 30px;
+}
+
+.btn-modal {
+  display: inline-block;
+  margin-top: 24px;
+  border-top: 1px solid #ddd;
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #25376d;
+}
+
+/* Media Orientaion */
+
+@media (orientation: landscape) and (max-width: 1024px) {
+  main {
+    gap: 1em;
+  }
+
+  img {
+    width: 100px;
+  }
+}

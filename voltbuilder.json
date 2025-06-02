@@ -1,14 +1,51 @@
+// See https://volt.build/docs/set_up/#voltbuilderjson for details
+
 {
-  "androidAlias": "key0",
-  "androidAliasPassword": "mypassword",
-  "androidKeystore": "certificates/android.p12",
-  "androidKeystorePassword": "mypassword",
-  "iosDevP12": "certificates/ios_development.p12",
-  "iosDevP12Password": "mypassword",
-  "iosDevelopment": "certificates/ios_development.mobileprovision",
-  "iosDistP12": "certificates/ios_distribution.p12",
-  "iosDistP12Password": "mypassword",
-  "iosDistribution": "certificates/ios_distribution.mobileprovision",
-  "iosPackageType": "app-store",
-  "release": "debug"
+  // Certificate section - need certificates? Generate them using VoltSigner!
+  // https://volt.build/VoltSigner/
+
+  // Android signing certificate settings - not needed for debug builds
+
+  //"androidAlias": "key0",
+  //"androidAliasPassword": "mypassword",
+  //"androidKeystore": "certificates/android.p12",
+  //"androidKeystorePassword": "mypassword",
+
+
+  // iOS development certificate/provisioning settings
+
+  //"iosDevP12": "certificates/ios_development.p12",
+  //"iosDevP12Password": "mypassword",
+  //"iosDevelopment": "certificates/ios_development.mobileprovision",
+
+
+  // iOS distribution certificate/provisioning settings
+
+  //"iosDistP12": "certificates/ios_distribution.p12",
+  //"iosDistP12Password": "mypassword",
+  //"iosDistribution": "certificates/ios_distribution.mobileprovision",
+  //"iosPackageType": "app-store",
+
+
+  // Uploads section
+
+  // Automatic uploads to Google Play
+  // See https://volt.build/docs/google_play/ for details
+
+  //"googlePlayKey": "google.json",
+  //"googlePlayTrack": "beta",
+
+
+  // Automatic uploads to Apple's App Store
+  // See https://volt.build/docs/apple_appstore/ for details
+
+  //"appStoreConnectAccount": "my-app-store-login",
+  //"appStoreConnectAppPassword": "my-app-store-password",
+
+
+  // the release type - debug or release
+  "release": "debug",
+
+  // verbose logging is enabled by default, set to false to disable
+  "verbose": "true"
 }

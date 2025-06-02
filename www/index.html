@@ -1,42 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>HelloWorld</title>
-  <meta name='Description' content='HelloWorld' />
-  <meta name='version' content='1.0.0' />
-  <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no viewport-fit=cover' />
-  <meta name='theme-color' content='#000000' />
-  <meta name='mobile-web-app-capable' content='yes' />
-  <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
-  <meta name='apple-mobile-web-app-title' content='' />
-  <meta name='copyright' content='copyright 2025 ABC Company' />
-  <meta http-equiv='Content-Security-Policy' content="default-src * file:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; img-src 'self' data:;" />
-  <script src="cordova.js"></script>
-</head>
-<body style="font-family:'Helvetica Neue';">
-<img src="images/voltbuilder-150.png">
-<h1>Here's a simple HelloWorld.</h1>
-<button style="margin:20px;font-size:20px;" onclick="showMessage()">Click me!</button>
+  <head>
+    <meta charset="utf-8" />
+    <title>HelloWorld</title>
+    <meta name="Description" content="HelloWorld" />
+    <meta name="version" content="1.0.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no viewport-fit=cover" />
+    <meta name="theme-color" content="#25376d" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="" />
+    <meta name="copyright" content="copyright 2025 ABC Company" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * file:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; img-src 'self' data:;" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="cordova.js"></script>
+  </head>
+  <body>
+    <main class="flex-col">
+      <img alt="" src="images/voltbuilder-150.png" />
+      <h1>Here's a simple Cordova sample.</h1>
+      <button class="btn-main" id="show-dialog-btn" aria-label="Tap to view app info" aria-disabled="false" onclick="showMessage()">
+        Tap for App Info
+      </button>
+      <a href="https://volt.build/docs/resources/" class="docs-link">Next Steps: Icons & Splash Screens &rarr;</a>
+      <dialog id="infoDialog" role="dialog" aria-labelledby="dialogTitle" aria-describedby="dialogDesc">
+        <h2 id="dialogTitle">Hello World!</h2>
+        <p id="dialogDesc"></p>
+        <a href="#" class="btn-modal" id="closeBtn" onclick="window.infoDialog.close();">CLOSE</a>
+      </dialog>
+    </main>
 
-<script>
-document.addEventListener('deviceready', onDeviceReady, false);
+    <script>
+      document.addEventListener("deviceready", onDeviceReady, false);
 
-function onDeviceReady() {
-    // Cordova is now initialized. Have fun!
-    console.log('instantiation complete.');
- }
+      function onDeviceReady() {
+        // Cordova is now initialized. Have fun!
+        console.log("instantiation complete.");
+      }
 
-function showMessage() {
-  // display info from Cordova and cordova-plugin-device
-  alert(
-    `Hello World!
-    Running cordova-${cordova.platformId}@${cordova.version}
-    ${device.platform} ${device.version} on ${device.manufacturer}`
-  );
-}
+      function showMessage() {
+        // display info from Cordova and cordova-plugin-device
+        dialogDesc.textContent = `Running cordova-${cordova.platformId}@${cordova.version}
+        ${device.platform} ${device.version} on ${device.manufacturer}`;
 
-</script>
-
-</body>
+        // Show the dialog and set focus for accessibility
+        infoDialog.showModal();
+        document.getElementById("closeBtn").focus();
+      }
+    </script>
+  </body>
 </html>
