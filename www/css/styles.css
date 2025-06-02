@@ -30,12 +30,15 @@ main {
   justify-content: center;
   gap: 2em;
   height: 100vh;
-  padding: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 img {
+  margin-top: auto;
   max-width: 100%;
   height: auto;
+  padding-top: 1em;
 }
 
 h1 {
@@ -58,6 +61,16 @@ h1 {
 .btn-main:active {
   background-color: #f1f4f6;
   color: #d60c3f;
+}
+
+.docs-link {
+  margin-top: auto;
+  padding: 1em;
+  border-top: 1px solid #ddd;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #25376d;
 }
 
 /* Dialog Styles */
@@ -95,4 +108,16 @@ h2 {
   text-align: center;
   text-decoration: none;
   color: #25376d;
+}
+
+/* Media Orientaion */
+
+@media (orientation: landscape) and (max-width: 1024px) {
+  main {
+    gap: 1em;
+  }
+
+  img {
+    width: 100px;
+  }
 }
